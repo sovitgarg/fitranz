@@ -1,0 +1,1195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imram Shaik | Elite Fitness Coach | Mr. India Champion</title>
+    <meta name="description" content="Train with Imram Shaik - 2x Mr. India, 3x Mr. Karnataka, 3x Mr. Bangalore. Transform your body with a champion's guidance.">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #8BC34A;
+            --primary-dark: #689F38;
+            --dark: #2C2C2C;
+            --dark-secondary: #3A3A3A;
+            --dark-card: #F5F5F5;
+            --gray: #666666;
+            --gray-light: #757575;
+            --white: #ffffff;
+            --text-light: #333333;
+            --border-color: #E0E0E0;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--white);
+            color: var(--text-light);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Navigation */
+        nav {
+            padding: 20px 0;
+            border-bottom: 1px solid var(--border-color);
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+        }
+
+        .nav-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--dark);
+            text-decoration: none;
+        }
+
+        .logo span {
+            color: var(--primary);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--gray);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--dark);
+        }
+
+        .nav-cta {
+            background: var(--primary);
+            color: var(--white);
+            padding: 12px 24px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background 0.3s;
+        }
+
+        .nav-cta:hover {
+            background: var(--primary-dark);
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 160px 0 100px;
+            text-align: center;
+            border-bottom: 1px solid var(--border-color);
+            background: var(--white);
+        }
+
+        .badge {
+            display: inline-block;
+            background: var(--primary);
+            border: 2px solid var(--primary);
+            color: var(--white);
+            padding: 10px 24px;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            font-weight: 700;
+            margin-bottom: 30px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: 900;
+            line-height: 1.1;
+            margin-bottom: 25px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            color: var(--dark);
+        }
+
+        .hero h1 span {
+            color: var(--primary);
+        }
+
+        .hero-subtitle {
+            font-size: 1.25rem;
+            color: var(--gray);
+            max-width: 650px;
+            margin: 0 auto 40px;
+        }
+
+        .hero-cta {
+            display: inline-block;
+            background: var(--primary);
+            color: var(--white);
+            padding: 18px 40px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.1rem;
+            transition: all 0.3s;
+        }
+
+        .hero-cta:hover {
+            background: var(--primary-dark);
+            transform: translateY(-2px);
+        }
+
+        /* Achievements */
+        .achievements {
+            padding: 80px 0;
+            border-bottom: 1px solid var(--border-color);
+            background: var(--dark-card);
+        }
+
+        .achievements-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+            text-align: center;
+        }
+
+        .achievement-item h3 {
+            font-size: 3rem;
+            font-weight: 900;
+            color: var(--primary);
+            margin-bottom: 10px;
+        }
+
+        .achievement-item p {
+            color: var(--gray);
+            font-weight: 500;
+            font-size: 0.95rem;
+        }
+
+        /* About Section */
+        .about {
+            padding: 100px 0;
+            border-bottom: 1px solid var(--border-color);
+            background: var(--white);
+        }
+
+        .section-label {
+            color: var(--primary);
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 0.9rem;
+            margin-bottom: 15px;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 30px;
+            line-height: 1.2;
+            color: var(--dark);
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: start;
+        }
+
+        .about-text p {
+            color: var(--gray);
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+        }
+
+        .about-highlights {
+            background: var(--dark-card);
+            padding: 40px;
+            border-radius: 12px;
+            border: 1px solid var(--border-color);
+        }
+
+        .highlight-item {
+            padding: 15px 0;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .highlight-item:last-child {
+            border-bottom: none;
+        }
+
+        .highlight-item strong {
+            color: var(--dark);
+        }
+
+        /* Problems Section */
+        .problems {
+            padding: 100px 0;
+            background: var(--dark-card);
+        }
+
+        .problems-header {
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto 60px;
+        }
+
+        .problems-header p {
+            color: var(--gray);
+        }
+
+        .problems-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+        }
+
+        .problem-card {
+            background: var(--white);
+            padding: 35px;
+            border-radius: 12px;
+            border: 1px solid var(--border-color);
+        }
+
+        .problem-card h4 {
+            font-size: 1.25rem;
+            margin-bottom: 15px;
+            color: var(--dark);
+        }
+
+        .problem-card p {
+            color: var(--gray);
+        }
+
+        /* Services Section */
+        .services {
+            padding: 100px 0;
+            border-bottom: 1px solid var(--border-color);
+            background: var(--white);
+        }
+
+        .services-header {
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto 60px;
+        }
+
+        .services-header p {
+            color: var(--gray);
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+
+        .service-card {
+            background: var(--dark-card);
+            padding: 40px 30px;
+            border-radius: 12px;
+            border: 1px solid var(--border-color);
+            transition: border-color 0.3s, transform 0.3s;
+        }
+
+        .service-card:hover {
+            border-color: var(--primary);
+            transform: translateY(-5px);
+        }
+
+        .service-icon {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        .service-card h4 {
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            color: var(--dark);
+        }
+
+        .service-card p {
+            color: var(--gray);
+            font-size: 0.95rem;
+        }
+
+        .service-features {
+            margin-top: 20px;
+            padding-top: 20px;
+            border-top: 1px solid var(--border-color);
+        }
+
+        .service-features li {
+            color: var(--gray);
+            margin-bottom: 10px;
+            list-style: none;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        .service-features li::before {
+            content: "✓";
+            color: var(--primary);
+            position: absolute;
+            left: 0;
+        }
+
+        /* Pricing Section */
+        .pricing {
+            padding: 100px 0;
+            background: var(--white);
+        }
+
+        .pricing-header {
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto 60px;
+        }
+
+        .pricing-header p {
+            color: var(--gray);
+        }
+
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+
+        .pricing-card {
+            background: var(--white);
+            padding: 45px 35px;
+            border-radius: 12px;
+            border: 2px solid var(--border-color);
+            position: relative;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            transition: all 0.3s;
+        }
+
+        .pricing-card:hover {
+            box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+            transform: translateY(-4px);
+        }
+
+        .pricing-card.popular {
+            border-color: var(--primary);
+            border-width: 3px;
+            box-shadow: 0 4px 20px rgba(139, 195, 74, 0.25);
+        }
+
+        .pricing-card.popular:hover {
+            box-shadow: 0 6px 24px rgba(139, 195, 74, 0.35);
+        }
+
+        .popular-badge {
+            position: absolute;
+            top: -12px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--primary);
+            color: var(--white);
+            padding: 6px 20px;
+            border-radius: 50px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+
+        .pricing-card h4 {
+            font-size: 1.4rem;
+            margin-bottom: 10px;
+            color: var(--dark);
+        }
+
+        .pricing-card .duration {
+            color: var(--gray);
+            font-size: 0.9rem;
+            margin-bottom: 25px;
+        }
+
+        .price {
+            font-size: 3rem;
+            font-weight: 800;
+            margin-bottom: 5px;
+            color: var(--dark);
+        }
+
+        .price span {
+            font-size: 1rem;
+            font-weight: 400;
+            color: var(--gray);
+        }
+
+        .price-note {
+            color: var(--gray);
+            font-size: 0.85rem;
+            margin-bottom: 30px;
+        }
+
+        .pricing-features {
+            margin-bottom: 30px;
+        }
+
+        .pricing-features li {
+            color: var(--gray);
+            margin-bottom: 12px;
+            list-style: none;
+            padding-left: 25px;
+            position: relative;
+        }
+
+        .pricing-features li::before {
+            content: "✓";
+            color: var(--primary);
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+        }
+
+        .pricing-cta {
+            display: block;
+            text-align: center;
+            padding: 16px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+
+        .pricing-card .pricing-cta {
+            background: transparent;
+            border: 2px solid var(--primary);
+            color: var(--primary);
+        }
+
+        .pricing-card .pricing-cta:hover {
+            background: var(--primary);
+            color: var(--white);
+        }
+
+        .pricing-card.popular .pricing-cta {
+            background: var(--primary);
+            border: 2px solid var(--primary);
+            color: var(--white);
+        }
+
+        .pricing-card.popular .pricing-cta:hover {
+            background: var(--primary-dark);
+            border-color: var(--primary-dark);
+        }
+
+        /* Testimonials */
+        .testimonials {
+            padding: 100px 0;
+            border-bottom: 1px solid var(--border-color);
+            background: var(--white);
+        }
+
+        .testimonials-header {
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto 60px;
+        }
+
+        .testimonials-header p {
+            color: var(--gray);
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+
+        .testimonial-card {
+            background: var(--dark-card);
+            padding: 35px;
+            border-radius: 12px;
+            border: 1px solid var(--border-color);
+        }
+
+        .testimonial-text {
+            color: var(--gray);
+            font-size: 1rem;
+            font-style: italic;
+            margin-bottom: 25px;
+            line-height: 1.7;
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .author-avatar {
+            width: 50px;
+            height: 50px;
+            background: var(--primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 1.2rem;
+            color: var(--white);
+        }
+
+        .author-info h5 {
+            font-size: 1rem;
+            margin-bottom: 3px;
+            color: var(--dark);
+        }
+
+        .author-info p {
+            color: var(--gray);
+            font-size: 0.85rem;
+        }
+
+        /* Process Section */
+        .process {
+            padding: 100px 0;
+            background: var(--white);
+        }
+
+        .process-header {
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto 60px;
+        }
+
+        .process-header p {
+            color: var(--gray);
+        }
+
+        .process-steps {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+        }
+
+        .process-step {
+            text-align: center;
+        }
+
+        .step-number {
+            width: 60px;
+            height: 60px;
+            background: var(--primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: 800;
+            margin: 0 auto 20px;
+            color: var(--white);
+        }
+
+        .process-step h4 {
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+            color: var(--dark);
+        }
+
+        .process-step p {
+            color: var(--gray);
+            font-size: 0.9rem;
+        }
+
+        /* FAQ Section */
+        .faq {
+            padding: 80px 0;
+            border-bottom: 1px solid var(--border-color);
+            background: var(--dark-card);
+        }
+
+        .faq-header {
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto 50px;
+        }
+
+        .faq-header p {
+            color: var(--gray);
+        }
+
+        .faq-grid {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            background: var(--white);
+            border-radius: 8px;
+            padding: 30px;
+            margin-bottom: 20px;
+            border: 1px solid var(--border-color);
+        }
+
+        .faq-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .faq-question {
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin-bottom: 15px;
+            color: var(--dark);
+        }
+
+        .faq-answer {
+            color: var(--gray);
+            line-height: 1.8;
+            font-size: 1rem;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            padding: 100px 0;
+            text-align: center;
+            background: var(--white);
+            border-top: 1px solid var(--border-color);
+        }
+
+        .cta-section h2 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 20px;
+            color: var(--dark);
+        }
+
+        .cta-section p {
+            color: var(--gray);
+            font-size: 1.2rem;
+            margin-bottom: 40px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .cta-primary {
+            background: var(--primary);
+            color: var(--white);
+            padding: 18px 40px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 700;
+            transition: all 0.3s;
+            box-shadow: 0 4px 12px rgba(139, 195, 74, 0.3);
+        }
+
+        .cta-primary:hover {
+            background: var(--primary-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(139, 195, 74, 0.4);
+        }
+
+        .cta-secondary {
+            background: var(--white);
+            color: var(--dark);
+            padding: 18px 40px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 700;
+            border: 2px solid var(--border-color);
+            transition: all 0.3s;
+        }
+
+        .cta-secondary:hover {
+            border-color: var(--primary);
+            color: var(--primary);
+        }
+
+        /* Footer */
+        footer {
+            padding: 60px 0 30px;
+            border-top: 1px solid var(--border-color);
+            background: var(--dark-card);
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-brand h3 {
+            font-size: 1.5rem;
+            font-weight: 800;
+            margin-bottom: 15px;
+            color: var(--dark);
+        }
+
+        .footer-brand h3 span {
+            color: var(--primary);
+        }
+
+        .footer-brand p {
+            color: var(--gray);
+            font-size: 0.95rem;
+        }
+
+        .footer-column h4 {
+            font-size: 1rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: var(--dark);
+        }
+
+        .footer-column ul {
+            list-style: none;
+        }
+
+        .footer-column li {
+            margin-bottom: 12px;
+        }
+
+        .footer-column a {
+            color: var(--gray);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-column a:hover {
+            color: var(--primary);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid var(--border-color);
+            color: var(--gray);
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 992px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .achievements-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .services-grid,
+            .pricing-grid,
+            .testimonials-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .about-content {
+                grid-template-columns: 1fr;
+            }
+
+            .problems-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .process-steps {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .pricing-card.popular {
+                transform: none;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .achievements-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: 20px;
+            }
+
+            .achievement-item h3 {
+                font-size: 2.5rem;
+            }
+
+            .process-steps {
+                grid-template-columns: 1fr;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Smooth scroll */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Animate on scroll */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="container nav-content">
+            <a href="#" class="logo">FIT<span>RANZ</span></a>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#faq">FAQ</a></li>
+            </ul>
+            <a href="#contact" class="nav-cta">Start Now</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="badge">🏆 2x Mr. India Champion</div>
+            <h1>Transform Your Body With a <span>National Champion's</span> Guidance</h1>
+            <p class="hero-subtitle">Train under Imram Shaik — 2x Mr. India, 3x Mr. Karnataka, 3x Mr. Bangalore. Get personalized coaching that delivers real, lasting results.</p>
+            <a href="#contact" class="hero-cta">Start Your Transformation →</a>
+        </div>
+    </section>
+
+    <!-- Achievements -->
+    <section class="achievements">
+        <div class="container">
+            <div class="achievements-grid">
+                <div class="achievement-item">
+                    <h3>2×</h3>
+                    <p>Mr. India Champion</p>
+                </div>
+                <div class="achievement-item">
+                    <h3>3×</h3>
+                    <p>Mr. Karnataka Winner</p>
+                </div>
+                <div class="achievement-item">
+                    <h3>3×</h3>
+                    <p>Mr. Bangalore Title</p>
+                </div>
+                <div class="achievement-item">
+                    <h3>1×</h3>
+                    <p>Mr. India Fitness Model Runner-Up</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <p class="section-label">About Your Coach</p>
+                    <h2 class="section-title">Championship-Level Training, Personalized for You</h2>
+                    <p>I'm Imram Shaik, and I've spent over a decade mastering the art and science of physical transformation. My journey from aspiring athlete to national champion taught me one crucial lesson: there are no shortcuts, only smart strategies.</p>
+                    <p>With multiple Mr. India, Mr. Karnataka, and Mr. Bangalore titles, I've competed at the highest levels. But my true passion lies in helping everyday people unlock their potential. I've trained hundreds of clients — from complete beginners to competitive athletes — using the same principles that shaped my own success.</p>
+                    <p>My approach is simple: understand your body, respect the science, stay consistent, and never compromise on form. Whether you want to lose fat, build muscle, or compete on stage, I'll design a program that fits YOUR life.</p>
+                </div>
+                <div class="about-highlights">
+                    <h4 style="margin-bottom: 25px; font-size: 1.2rem;">Why Train With Me?</h4>
+                    <div class="highlight-item">
+                        <strong>Proven Track Record</strong><br>
+                        <span style="color: var(--gray);">9 championship titles across national and state levels</span>
+                    </div>
+                    <div class="highlight-item">
+                        <strong>Science-Based Methods</strong><br>
+                        <span style="color: var(--gray);">Programs backed by sports science, not bro-science</span>
+                    </div>
+                    <div class="highlight-item">
+                        <strong>Personalized Attention</strong><br>
+                        <span style="color: var(--gray);">Limited clients to ensure quality coaching</span>
+                    </div>
+                    <div class="highlight-item">
+                        <strong>Real-World Results</strong><br>
+                        <span style="color: var(--gray);">Clients who've transformed their lives, not just their bodies</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Problems Section -->
+    <section class="problems">
+        <div class="container">
+            <div class="problems-header">
+                <p class="section-label">Sound Familiar?</p>
+                <h2 class="section-title">The Struggles That Hold You Back</h2>
+            </div>
+            <div class="problems-grid">
+                <div class="problem-card">
+                    <h4>Confused by Conflicting Advice?</h4>
+                    <p>YouTube, Instagram, your gym buddy — everyone has an opinion. You've tried multiple programs but nothing seems to work consistently. You need a proven system, not another fad.</p>
+                </div>
+                <div class="problem-card">
+                    <h4>Too Busy to Figure It Out?</h4>
+                    <p>Between work, family, and life, you don't have time to research nutrition and design workout plans. You need someone to hand you a roadmap and keep you accountable.</p>
+                </div>
+                <div class="problem-card">
+                    <h4>Stuck at a Plateau?</h4>
+                    <p>You've made some progress but hit a wall. The same routine isn't working anymore. You need expert eyes to identify what's holding you back and break through.</p>
+                </div>
+                <div class="problem-card">
+                    <h4>Lacking Motivation & Consistency?</h4>
+                    <p>You start strong but lose steam after a few weeks. Without accountability and a clear plan, it's easy to fall back into old habits. You need a coach in your corner.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <div class="container">
+            <div class="services-header">
+                <p class="section-label">What I Offer</p>
+                <h2 class="section-title">Complete Transformation Programs</h2>
+                <p style="color: var(--gray); margin-top: 15px;">Every program is designed around YOUR goals, schedule, and lifestyle. No cookie-cutter plans.</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">💪</div>
+                    <h4>Strength & Muscle Building</h4>
+                    <p>Build lean muscle mass with structured progressive overload programs. Perfect for beginners and intermediates wanting to build a strong, aesthetic physique.</p>
+                    <ul class="service-features">
+                        <li>Custom workout splits</li>
+                        <li>Progressive overload tracking</li>
+                        <li>Form guidance & corrections</li>
+                        <li>Muscle-specific training</li>
+                    </ul>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🔥</div>
+                    <h4>Fat Loss & Body Recomposition</h4>
+                    <p>Lose stubborn fat while preserving muscle. Science-backed nutrition combined with strategic training for sustainable results that last.</p>
+                    <ul class="service-features">
+                        <li>Calorie & macro planning</li>
+                        <li>Metabolic training protocols</li>
+                        <li>Weekly check-ins & adjustments</li>
+                        <li>Sustainable eating strategies</li>
+                    </ul>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🏆</div>
+                    <h4>Competition Prep</h4>
+                    <p>Dreaming of stepping on stage? I'll guide you through every phase — from off-season building to peak week. Learn from someone who's been there.</p>
+                    <ul class="service-features">
+                        <li>Periodized prep protocols</li>
+                        <li>Posing guidance</li>
+                        <li>Peak week strategies</li>
+                        <li>Mental preparation</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="process">
+        <div class="container">
+            <div class="process-header">
+                <p class="section-label">How It Works</p>
+                <h2 class="section-title">Your Transformation Journey</h2>
+            </div>
+            <div class="process-steps">
+                <div class="process-step">
+                    <div class="step-number">1</div>
+                    <h4>Free Consultation</h4>
+                    <p>We discuss your goals, lifestyle, and limitations. I assess if we're a good fit.</p>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">2</div>
+                    <h4>Custom Plan Design</h4>
+                    <p>Based on our call, I create your personalized workout and nutrition program.</p>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">3</div>
+                    <h4>Execute & Track</h4>
+                    <p>You follow the plan while I monitor progress and make real-time adjustments.</p>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">4</div>
+                    <h4>Transform & Maintain</h4>
+                    <p>Achieve your goals and learn how to maintain your results for life.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq" id="faq">
+        <div class="container">
+            <div class="faq-header">
+                <h2 class="section-title">Common Questions</h2>
+            </div>
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <h4 class="faq-question">Do I need gym access to work with you?</h4>
+                    <p class="faq-answer">Not necessarily. While gym access allows for more variety, I can design effective home workouts with minimal equipment (resistance bands, dumbbells). We'll discuss your setup during the consultation.</p>
+                </div>
+                <div class="faq-item">
+                    <h4 class="faq-question">How quickly will I see results?</h4>
+                    <p class="faq-answer">Most clients notice changes in energy and strength within 2-3 weeks. Visible body composition changes typically appear around 4-6 weeks with consistent effort. Significant transformations happen over 12+ weeks.</p>
+                </div>
+                <div class="faq-item">
+                    <h4 class="faq-question">What if I have dietary restrictions?</h4>
+                    <p class="faq-answer">I work with all dietary preferences — vegetarian, vegan, eggetarian, or non-veg. Allergies and intolerances are factored into your meal plan. The goal is to make nutrition sustainable for YOUR lifestyle.</p>
+                </div>
+                <div class="faq-item">
+                    <h4 class="faq-question">How much time do I need to commit?</h4>
+                    <p class="faq-answer">Most programs require 4-6 hours per week for training (45-60 min sessions, 4-5 days). Nutrition doesn't require extra time — just smarter choices. I design programs around busy schedules.</p>
+                </div>
+                <div class="faq-item">
+                    <h4 class="faq-question">What makes you different from other coaches?</h4>
+                    <p class="faq-answer">I've competed at the highest level and won. I don't just teach theory — I've applied these principles to my own body under the most demanding conditions. Plus, I limit my client roster to ensure quality coaching.</p>
+                </div>
+                <div class="faq-item">
+                    <h4 class="faq-question">Can I get a refund if it doesn't work?</h4>
+                    <p class="faq-answer">I stand behind my coaching. If you follow the program consistently for 30 days and don't see progress, we'll work together to troubleshoot. I'm invested in your success because your results are my reputation.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section" id="contact">
+        <div class="container">
+            <h2>Ready to Start Your Transformation?</h2>
+            <p>Book a free consultation call. No pressure, no commitment — just a conversation about your goals.</p>
+            <div class="cta-buttons">
+                <a href="https://wa.me/919148410766?text=Hi%20Imram,%20I'm%20interested%20in%20your%20coaching%20program" class="cta-primary">WhatsApp Me →</a>
+                <a href="tel:+919148410766" class="cta-secondary">Call Now</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3>FIT<span>RANZ</span></h3>
+                    <p>Championship-level fitness coaching for real people. Transform your body with a proven system.</p>
+                </div>
+                <div class="footer-column">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#faq">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Programs</h4>
+                    <ul>
+                        <li><a href="#services">Muscle Building</a></li>
+                        <li><a href="#services">Fat Loss</a></li>
+                        <li><a href="#services">Competition Prep</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li><a href="https://wa.me/919148410766">WhatsApp</a></li>
+                        <li><a href="https://instagram.com/imramfit">Instagram</a></li>
+                        <li><a href="mailto:imram@example.com">Email</a></li>
+                        <li><a href="#contact">Book Call</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2025 FITRANZ. All rights reserved. | Bangalore, Karnataka, India</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Simple fade-in animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-in').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Smooth scroll for navigation
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
