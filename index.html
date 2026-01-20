@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Imram Shaik | Elite Fitness Coach | Mr. India Champion</title>
-    <meta name="description" content="Train with Imram Shaik - 2x Mr. India, 3x Mr. Karnataka, 3x Mr. Bangalore. Transform your body with a champion's guidance.">
+    <title>Imran Shaik | Elite Fitness Coach | Mr. India Champion</title>
+    <meta name="description" content="Train with Imran Shaik - 2x Mr. India, 3x Mr. Karnataka, 3x Mr. Bangalore. Transform your body with a champion's guidance.">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
     <style>
         * {
@@ -102,10 +102,23 @@
 
         /* Hero Section */
         .hero {
-            padding: 160px 0 100px;
-            text-align: center;
+            padding: 180px 0 120px;
             border-bottom: 1px solid var(--border-color);
-            background: var(--white);
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/Imran3Background.jpg');
+            background-size: cover;
+            background-position: center top;
+            position: relative;
+        }
+
+        .hero-content {
+            display: flex;
+            align-items: center;
+            max-width: 600px;
+        }
+
+        .hero-text {
+            text-align: left;
+            color: var(--white);
         }
 
         .badge {
@@ -123,14 +136,11 @@
         }
 
         .hero h1 {
-            font-size: 3.5rem;
+            font-size: 3.2rem;
             font-weight: 900;
             line-height: 1.1;
             margin-bottom: 25px;
-            max-width: 800px;
-            margin-left: auto;
-            margin-right: auto;
-            color: var(--dark);
+            color: var(--white);
         }
 
         .hero h1 span {
@@ -138,10 +148,9 @@
         }
 
         .hero-subtitle {
-            font-size: 1.25rem;
-            color: var(--gray);
-            max-width: 650px;
-            margin: 0 auto 40px;
+            font-size: 1.15rem;
+            color: var(--white);
+            margin: 0 0 40px;
         }
 
         .hero-cta {
@@ -217,6 +226,7 @@
             grid-template-columns: 1fr 1fr;
             gap: 60px;
             align-items: start;
+            margin-bottom: 60px;
         }
 
         .about-text p {
@@ -225,24 +235,57 @@
             margin-bottom: 20px;
         }
 
+        .about-image {
+            position: relative;
+        }
+
+        .about-image img {
+            width: 100%;
+            border-radius: 16px;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+            transition: transform 0.3s ease;
+        }
+
+        .about-image img:hover {
+            transform: scale(1.03);
+        }
+
         .about-highlights {
             background: var(--dark-card);
-            padding: 40px;
+            padding: 50px;
             border-radius: 12px;
             border: 1px solid var(--border-color);
         }
 
-        .highlight-item {
-            padding: 15px 0;
-            border-bottom: 1px solid var(--border-color);
+        .about-highlights h4 {
+            text-align: center;
+            margin-bottom: 40px;
+            font-size: 1.8rem;
+            color: var(--dark);
         }
 
-        .highlight-item:last-child {
-            border-bottom: none;
+        .highlights-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 40px;
+        }
+
+        .highlight-item {
+            text-align: center;
         }
 
         .highlight-item strong {
             color: var(--dark);
+            font-size: 1.1rem;
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .highlight-item span {
+            display: block;
+            color: var(--gray);
+            font-size: 0.95rem;
+            line-height: 1.6;
         }
 
         /* Problems Section */
@@ -669,15 +712,16 @@
 
         /* CTA Section */
         .cta-section {
-            padding: 100px 0;
+            padding: 120px 0;
             text-align: center;
-            background: var(--white);
+            background: linear-gradient(135deg, rgba(139, 195, 74, 0.08) 0%, rgba(139, 195, 74, 0.03) 100%);
             border-top: 1px solid var(--border-color);
+            position: relative;
         }
 
         .cta-section h2 {
-            font-size: 2.5rem;
-            font-weight: 800;
+            font-size: 3rem;
+            font-weight: 900;
             margin-bottom: 20px;
             color: var(--dark);
         }
@@ -795,8 +839,21 @@
 
         /* Responsive */
         @media (max-width: 992px) {
+            .hero-content {
+                max-width: 100%;
+            }
+
+            .hero-text {
+                text-align: center;
+            }
+
             .hero h1 {
                 font-size: 2.5rem;
+            }
+
+            .hero-subtitle {
+                margin: 0 auto 40px;
+                max-width: 600px;
             }
 
             .achievements-grid {
@@ -811,6 +868,10 @@
 
             .about-content {
                 grid-template-columns: 1fr;
+            }
+
+            .highlights-grid {
+                grid-template-columns: repeat(2, 1fr);
             }
 
             .problems-grid {
@@ -850,6 +911,10 @@
 
             .achievement-item h3 {
                 font-size: 2.5rem;
+            }
+
+            .highlights-grid {
+                grid-template-columns: 1fr;
             }
 
             .process-steps {
@@ -900,10 +965,14 @@
     <!-- Hero Section -->
     <section class="hero">
         <div class="container">
-            <div class="badge">🏆 2x Mr. India Champion</div>
-            <h1>Transform Your Body With a <span>National Champion's</span> Guidance</h1>
-            <p class="hero-subtitle">Train under Imram Shaik — 2x Mr. India, 3x Mr. Karnataka, 3x Mr. Bangalore. Get personalized coaching that delivers real, lasting results.</p>
-            <a href="#contact" class="hero-cta">Start Your Transformation →</a>
+            <div class="hero-content">
+                <div class="hero-text">
+                    <div class="badge">🏆 2x Mr. India Champion</div>
+                    <h1>Transform Your Body With a <span>National Champion's</span> Guidance</h1>
+                    <p class="hero-subtitle">Train under Imran Shaik — 2x Mr. India, 3x Mr. Karnataka, 3x Mr. Bangalore. Get personalized coaching that delivers real, lasting results.</p>
+                    <a href="#contact" class="hero-cta">Start Your Transformation →</a>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -938,27 +1007,33 @@
                 <div class="about-text">
                     <p class="section-label">About Your Coach</p>
                     <h2 class="section-title">Championship-Level Training, Personalized for You</h2>
-                    <p>I'm Imram Shaik, and I've spent over a decade mastering the art and science of physical transformation. My journey from aspiring athlete to national champion taught me one crucial lesson: there are no shortcuts, only smart strategies.</p>
+                    <p>I'm Imran Shaik, and I've spent over a decade mastering the art and science of physical transformation. My journey from aspiring athlete to national champion taught me one crucial lesson: there are no shortcuts, only smart strategies.</p>
                     <p>With multiple Mr. India, Mr. Karnataka, and Mr. Bangalore titles, I've competed at the highest levels. But my true passion lies in helping everyday people unlock their potential. I've trained hundreds of clients — from complete beginners to competitive athletes — using the same principles that shaped my own success.</p>
                     <p>My approach is simple: understand your body, respect the science, stay consistent, and never compromise on form. Whether you want to lose fat, build muscle, or compete on stage, I'll design a program that fits YOUR life.</p>
                 </div>
-                <div class="about-highlights">
-                    <h4 style="margin-bottom: 25px; font-size: 1.2rem;">Why Train With Me?</h4>
+                <div class="about-image">
+                    <img src="images/Imran2.jpg" alt="Imran Shaik showcasing championship-winning physique">
+                    <img src="images/Imran4.jpg" alt="Imran Shaik training" style="margin-top: 30px;">
+                </div>
+            </div>
+            <div class="about-highlights">
+                <h4>Why Train With Me?</h4>
+                <div class="highlights-grid">
                     <div class="highlight-item">
-                        <strong>Proven Track Record</strong><br>
-                        <span style="color: var(--gray);">9 championship titles across national and state levels</span>
+                        <strong>Proven Track Record</strong>
+                        <span>9 championship titles across national and state levels</span>
                     </div>
                     <div class="highlight-item">
-                        <strong>Science-Based Methods</strong><br>
-                        <span style="color: var(--gray);">Programs backed by sports science, not bro-science</span>
+                        <strong>Science-Based Methods</strong>
+                        <span>Programs backed by sports science, not bro-science</span>
                     </div>
                     <div class="highlight-item">
-                        <strong>Personalized Attention</strong><br>
-                        <span style="color: var(--gray);">Limited clients to ensure quality coaching</span>
+                        <strong>Personalized Attention</strong>
+                        <span>Limited clients to ensure quality coaching</span>
                     </div>
                     <div class="highlight-item">
-                        <strong>Real-World Results</strong><br>
-                        <span style="color: var(--gray);">Clients who've transformed their lives, not just their bodies</span>
+                        <strong>Real-World Results</strong>
+                        <span>Clients who've transformed their lives, not just their bodies</span>
                     </div>
                 </div>
             </div>
@@ -1112,7 +1187,7 @@
             <h2>Ready to Start Your Transformation?</h2>
             <p>Book a free consultation call. No pressure, no commitment — just a conversation about your goals.</p>
             <div class="cta-buttons">
-                <a href="https://wa.me/919148410766?text=Hi%20Imram,%20I'm%20interested%20in%20your%20coaching%20program" class="cta-primary">WhatsApp Me →</a>
+                <a href="https://wa.me/919148410766?text=Hi%20Imran,%20I'm%20interested%20in%20your%20coaching%20program" class="cta-primary">WhatsApp Me →</a>
                 <a href="tel:+919148410766" class="cta-secondary">Call Now</a>
             </div>
         </div>
